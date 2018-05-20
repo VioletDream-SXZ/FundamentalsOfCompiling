@@ -1,0 +1,14 @@
+该项目是简单C语言的编辑器实现，只要实现的功能有以下：
+1. 整数变量，如a = 2等
+2. if语句的生成式
+3. while语句的生成式
+4. 嵌套if和where的生成式
+
+该项目使用的环境： Ubuntu16.04
+该项目使用的教程：
+1. 生成可执行文件：
+    gcc -g main.c scan.c -o scan -DDSCAN
+    gcc -g main.c scan.c semanteme.c -o lrparse -DDLRPARSE
+2. 生成两个可执行文件：
+    scan：   对于存放在data.txt里面的代码进行解析，生成对应与globals.h里面的宏定义变量。
+    lrparse：对于存放在data.txt里面的代码进行转化，如果生成失败，则在result.txt里面有相应提示，否则，生成的内容放在table.txt里面。
